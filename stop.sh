@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo service tomcat7 stop
+sudo service tomcat8 stop

@@ -1,15 +1,10 @@
 version: 0.1
 
-env:
-  variables:
-    JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64"
 
 phases:
   install:
     commands:
       - echo Entered the install phase...
-      - apt-get update -y
-      - apt-get install -y maven
     finally:
       - echo This always runs even if the update or install command fails 
   pre_build:
@@ -22,7 +17,7 @@ phases:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
-      - mvn clean install
+      - mvn install
     finally:
       - echo This always runs even if the install command fails
   post_build:
@@ -31,5 +26,5 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - target/messageUtil-1.0.jar
-  discard-paths: yes
+    - *
+  

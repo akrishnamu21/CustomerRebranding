@@ -63,7 +63,7 @@
           </includes>
         </configuration>
 			</plugin>
-		</plugins>
+		
       <plugin>
         <artifactId>maven-site-plugin</artifactId>
       </plugin>

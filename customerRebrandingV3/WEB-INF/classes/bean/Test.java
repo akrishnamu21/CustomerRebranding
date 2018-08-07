@@ -10,9 +10,33 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
-
+import org.junit.Test;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
+
+import static org.junit.Assert.*;
+
+
+
+public class JunitTest {
+		
+	
+	
+	@Test
+		public void testOne(){
+			
+			System.out.println("Junit test case to test getters and setters");
+			String Uname = "Admin";
+			User u = new User();
+			u.setUname(Uname);
+			String getName = u.getUname();
+			assertEquals(getName, Uname);
+		
+		
+		}
+	
+		
+}
 public class Test{
 	
 	

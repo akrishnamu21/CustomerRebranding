@@ -12,8 +12,32 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+import static org.junit.Assert.*;
 
-public class Test{
+import org.junit.Test;
+
+public class JunitTest {
+		
+	
+	
+	@Test
+		public void testOne(){
+			
+			System.out.println("Junit test case to test getters and setters");
+			String Uname = "Admin";
+			User u = new User();
+			u.setUname(Uname);
+			String getName = u.getUname();
+			assertEquals(getName, Uname);
+		
+		
+		}
+	
+		
+}
+
+
+/*public class Test{
 	
 	
 	
@@ -149,3 +173,4 @@ public class Test{
 		
 	}
 }
+*/

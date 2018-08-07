@@ -1,4 +1,5 @@
 package bean; 
+package tests;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
